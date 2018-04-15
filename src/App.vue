@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MyButton
+      title="message of component"
+      question="your question"
+      :onClick="consoleClick"
+    />
+    <MyButton
+      title="message of component 2"
+      question="your question 2"
+      :onClick="alertClick"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyButton from './components/MyButton.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MyButton
+  },
+  methods: {
+    consoleClick() {
+      console.log('Button clicked')
+    },
+    alertClick() {
+      alert('Button clicked')
+    }
   }
 }
 </script>
