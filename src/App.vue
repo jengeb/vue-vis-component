@@ -4,11 +4,7 @@
       title="message of component"
       question="your question"
       :onClick="consoleClick"
-    />
-    <MyButton
-      title="message of component 2"
-      question="your question 2"
-      :onClick="alertClick"
+      v-bind:data="{ id: 1, title: 'My Journey with Vue' }"
     />
   </div>
 </template>
