@@ -4,7 +4,7 @@
       title="message of component"
       question="your question"
       :onClick="consoleClick"
-      v-bind:data="{ id: 1, title: 'My Journey with Vue' }"
+      v-bind:json="{ id: 1, title: 'My Journey with Vue' }"
     />
   </div>
 </template>
@@ -28,13 +28,12 @@ export default {
 }
 </script>
 
-<style>
-#app {
+<style lang="sass">
+#app
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
 </style>
