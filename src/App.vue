@@ -5,7 +5,7 @@
       title="message of component"
       question="your question"
       :onClick="consoleClick"
-      v-bind:json="{ id: 1, title: 'title of json TODO render markdown Type **Markdown** here.' }"
+      v-bind:json="{ id: 1, title: 'title *of* json ~~TODO~~ render __markdown__ Type **Markdown** here.' }"
     />
   </div>
 </template>
@@ -22,15 +22,11 @@ export default {
     consoleClick() {
       console.log('Button clicked')
     },
-    alertClick() {
-      alert('Button clicked')
-    }
   }
 }
 </script>
 
 <style lang="sass">
-
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 #app
