@@ -10,7 +10,7 @@
     <button type="button" @click="onClick" class="btn btn-primary">
       {{ buttonText }}
     </button>
-    <vue-markdown>{{ json.title }}</vue-markdown>
+    <vue-markdown>{{ json.text }}</vue-markdown>
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      data: [40, 50, 10, 20, 90, 80, 100, 10, 90, 60, 120, 10, 0, 100, 10],
+      data: this.json.data,
       line: '',
     };
   },

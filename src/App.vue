@@ -5,7 +5,10 @@
       question="your question"
       title="message of component"
       :onClick="consoleClick"
-      v-bind:json="{ id: 1, title: 'title *of* json ~~TODO~~ render __markdown__ Type **Markdown** here.' }"
+      v-bind:json="{
+        data: [10,2,3,400,50,6,70,10],
+        text: 'title *of* json ~~TODO~~ render __markdown__ Type **Markdown** here.'
+      }"
     />
   </div>
 </template>
