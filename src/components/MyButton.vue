@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="visualization">
     <h1>{{ title }}</h1>
     <h2>{{ question }}</h2>
-    <button @click="onClick" class="Button">
-      <slot>Button</slot>
-    </button>
-    <span>{{ json.title }}</span>
     <svg width="500" height="270">
       <g>
         <path :d="line" />
       </g>
     </svg>
+    <button type="button" @click="onClick" class="btn btn-primary">
+      {{ buttonText }}
+    </button>
+    <div>{{ json.title }}</div>
   </div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
   props: {
     title: String,
     question: String,
+    buttonText: String,
     onClick: {
       type: Function,
       required: true
@@ -67,4 +68,8 @@ svg
     fill: none
     stroke: #76BF8A
     stroke-width: 3px
+
+.visualization
+  text-align: center
+
 </style>

@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <MyButton
+      buttonText="text of button"
       title="message of component"
       question="your question"
       :onClick="consoleClick"
-      v-bind:json="{ id: 1, title: 'My Journey with Vue' }"
+      v-bind:json="{ id: 1, title: 'title of json TODO render markdown Type **Markdown** here.' }"
     />
   </div>
 </template>
@@ -29,9 +30,11 @@ export default {
 </script>
 
 <style lang="sass">
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 #app
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  text-align: center
 </style>
