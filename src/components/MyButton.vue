@@ -7,7 +7,7 @@
     </button>
     <span>{{ json.title }}</span>
     <svg width="500" height="270">
-      <g style="transform: translate(0, 10px)">
+      <g>
         <path :d="line" />
       </g>
     </svg>
